@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>JQuery Console Demo</title>
+    <meta name="Content-Type" content="text/html; charset=UTF-8">
+
+    <script src="lib/bootstrap/jquery.min.js"></script>
+	<script src="lib/bootstrap/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+    <script src="grammar/piethon.js"></script>
+    <script src="main.js"></script>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/jquery.console.js"></script>
+    <!-- Everything beyond this point is user-customized -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+          var wholeLines = "";
+         /* First console */
+         var console = $('<div class="console">');
+         $('body').append(console);
+         var controller = console.console({
+           promptLabel: 'myPython> ',
+           commandValidate:function(line){
+             if (line == "") return false;
+             else return true;
+           },
+           commandHandle:function(line, report) {
+               process(line, report);
+            },
+           autofocus:true,
+           animateScroll:true,
+           promptHistory:true
+         });
+       });
+    </script>
+    <style type="text/css" media="screen">
+    div.console { font-size: 14px; margin-top:1em }
+    div.console div.jquery-console-inner
+     { width:100%; height:680px; background:#efefef; padding:0.5em;
+       overflow:auto }
+    div.console div.jquery-console-prompt-box
+     { color:#444; font-family:monospace; }
+    div.console div.jquery-console-focus span.jquery-console-cursor
+     { background:#333; color:#eee; font-weight:bold }
+    div.console div.jquery-console-message-error
+     { color:#ef0505; font-family:sans-serif; font-weight:bold;
+       padding:0.1em; }
+    div.console div.jquery-console-message-success
+     { color:#187718; font-family:monospace;
+       padding:0.1em; }
+    div.console span.jquery-console-prompt-label { font-weight:bold }
+
+    </style>
+  </head>
+  <body>
+      <div class="title">
+  		<span>MyPython</span>
+  		<span class="switch">
+  			<div class="btn-group">
+  	    	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Command
+  	        	<span class="caret"></span>
+  	    	</button>
+  	    <ul class="dropdown-menu" role="menu">
+  	        <li>
+  	            <a href="index.html">IDE</a>
+  	        </li>
+  	    </ul>
+  	</div>
+  	</span>
+  	</div>
+  </body>
+</html>

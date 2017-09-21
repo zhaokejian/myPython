@@ -1,0 +1,144 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+.title {
+	position: relative;
+	width: 100%;
+	padding: 5px;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.switch {
+	margin-left: 10px;
+}
+
+.bar {
+	padding: 5px;
+	height: 50px;
+}
+
+.btn-default {
+	text-shadow: none;
+	background-image: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+      background-color: #fff;
+      border-color: #8c8c8c;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+}
+
+/*===================editor_container====================*/
+#editor_container {
+	position: relative;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	/*border-right: 3px solid #777777;
+	border-radius: 1px;
+	box-shadow: -1px 0 2px #bbbbbb;*/
+}
+#editor {
+	position: relative;
+    height: 650px;
+	width: 100%;
+	font-size: 14px;
+	border-bottom: 1px solid #efefef;
+	border-top: 1px solid #efefef;
+}
+/*#runbtn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 24px;
+	z-index: 999;
+}
+#examples {
+	position: absolute;
+	top: 40px;
+	right: 10px;
+	height: 24px;
+	z-index: 999;
+}*/
+
+/*=========================console_container============================*/
+#console_container {
+	position: relative;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	/*padding-left: 8px;*/
+}
+
+#clearbtn {
+	z-index: 999;
+}
+
+/* The console container element */
+#console {
+	position: relative;
+	padding: 0px;
+	margin:0px;
+	height: 650px;
+	width: 100%;
+}
+/* The inner console element. */
+.jqconsole {
+    padding: 0px;
+	padding-left:2px;
+	margin:0px;
+	font-size: 14px;
+	border: none;
+	background-color: #efefef;
+	border-left: 2px solid #bbb;
+	border-radius: 0;
+	box-shadow: none;
+}
+/* The cursor. */
+.jqconsole-cursor {
+    background-color: gray;
+}
+/* The cursor color when the console looses focus. */
+.jqconsole-blurred .jqconsole-cursor {
+    background-color: #666;
+}
+/* The current prompt text color */
+.jqconsole-prompt {
+    color: #444;
+	font-weight: bold;
+}
+
+/* The text color of the output. */
+.jqconsole-output {
+    color: #444;
+	font-weight: normal;
+}
+
+.jqconsole-message-success {
+	color: #1ad027;
+	font-weight: bold;
+}
+
+.jqconsole-message-error {
+	color: #ef0505;
+	font-weight: normal;
+}
+
+.jqconsole-result {
+	color: #187718;
+	font-weight: bold;
+}
